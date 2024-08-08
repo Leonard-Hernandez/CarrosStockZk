@@ -1,0 +1,9 @@
+<?page title="search" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="search" border="normal" width="600px">
+	Keyword:
+	<textbox id="KeywordBox"/>
+	<button id="serachButton" label="Search" iconSclass="z-icon-search" style="margin: 0 0 5px 5px"/>
+	
+</window>
+</zk>
