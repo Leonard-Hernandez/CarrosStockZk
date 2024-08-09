@@ -1,11 +1,11 @@
 <?page title="search" contentType="text/html;charset=UTF-8"?>
 <zk>
-<window title="search" border="normal" width="600px">
+<window title="search" border="normal" width="600px" apply="controller.SearchController">
 	
 	<!-- search -->
 	Keyword:
-	<textbox id="KeywordBox"/>
-	<button id="serachButton" label="Search" iconSclass="z-icon-search" style="margin: 0 0 5px 5px"/>
+	<textbox id="keywordBox"/>
+	<button id="searchButton" label="Search" iconSclass="z-icon-search" style="margin: 0 0 5px 5px"/>
 	
 	<!-- list -->
 	<listbox id="carListbox" emptyMessage="No car found in the result" rows="5">
@@ -14,16 +14,18 @@
 			<listheader label="Make"/>
 			<listheader label="Price" width="20%"/>
 		</listhead>
-		<listitem>
-			<listcell label="car model"></listcell>
-			<listcell label="make"></listcell>
-			<listcell label="price"></listcell>
-		</listitem>
+		<template name="model">
+			<listitem>
+				<listcell label="${each.model}" />
+				<listcell label="${each.make}" />
+				<listcell label="${('$' += each.price)}"/>
+			</listitem>
+		</template>
 	</listbox>
 	
 	<!-- detail -->
 	<hlayout style="margin-top_20px" width="100%">
-		<image id="preciewImage" width="250px"/>
+		<image id="previewImage" width="250px"/>
 		<vlayout>
 			<label id="modelLabel" />
 			<label id="makeLabel"/>

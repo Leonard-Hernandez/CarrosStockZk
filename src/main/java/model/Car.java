@@ -5,16 +5,16 @@ public class Car {
 	private Integer id;
 	private String model;
 	private String make;
-	private String preciew;
+	private String preview;
 	private String description;
 	private Integer price;
 	
-	public Car(Integer id, String model, String make, String preciew, String description, Integer price) {
+	public Car(Integer id, String model, String make, String preview, String description, Integer price) {
 		super();
 		this.id = id;
 		this.model = model;
 		this.make = make;
-		this.preciew = preciew;
+		this.preview = preview;
 		this.description = description;
 		this.price = price;
 	}
@@ -43,12 +43,12 @@ public class Car {
 		this.make = make;
 	}
 
-	public String getPreciew() {
-		return preciew;
+	public String getPreview() {
+		return preview;
 	}
 
 	public void setPreciew(String preciew) {
-		this.preciew = preciew;
+		this.preview = preciew;
 	}
 
 	public String getDescription() {
