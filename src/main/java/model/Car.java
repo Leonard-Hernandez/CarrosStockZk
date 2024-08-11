@@ -1,15 +1,15 @@
 package model;
 
 public class Car {
-	
+
 	private Integer id;
 	private String model;
 	private String make;
 	private String preview;
 	private String description;
 	private Integer price;
-	
-	public Car(Integer id, String model, String make, String preview, String description, Integer price) {
+
+	public Car(Integer id, String model, String make, String description, String preview, Integer price) {
 		super();
 		this.id = id;
 		this.model = model;
@@ -66,7 +66,5 @@ public class Car {
 	public void setPrice(Integer price) {
 		this.price = price;
 	}
-	
-		
 
 }
