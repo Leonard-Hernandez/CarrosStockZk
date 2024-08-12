@@ -1,0 +1,37 @@
+<?page title="search" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="search MVVM" border="normal" width="600px" viewModel="@id('vm') @init('controller.SearchViewModel')">
+	
+	<!-- search -->
+	Keyword:
+	<textbox value="@save(vm.keyword)"/>
+	<button label="Search" iconSclass="z-icon-search" onClick="@command('search')"/>
+	
+	<!-- list -->
+	<listbox model="@load(vm.carList)" selectedItem="@save(vm.selectedCar)" emptyMessage="No car found in the result" rows="5">
+		<listhead>
+			<listheader label="Model"/>
+			<listheader label="Make"/>
+			<listheader label="Price" width="20%"/>
+		</listhead>
+		<template name="model">
+			<listitem>
+				<listcell label="@init(each.model)" />
+				<listcell label="@init(each.make)" />
+				<listcell>$<label value="@init(each.price)" /></listcell>
+			</listitem>
+		</template>
+	</listbox>
+	
+	<!-- detail -->
+	<hlayout style="margin-top_20px" width="100%">
+		<image src="@load(vm.selectedCar.preview)" width="250px"/>
+		<vlayout>
+			<label value="@load(vm.selectedCar.model)" />
+			<label value="@load(vm.selectedCar.make)"/>
+			<label value="@load(vm.selectedCar.price)"/>
+			<label value="@load(vm.selectedCar.description)"/>
+		</vlayout>	
+	</hlayout>
+</window>
+</zk>

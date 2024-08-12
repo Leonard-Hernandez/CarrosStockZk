@@ -4,8 +4,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 import model.Car;
+import service.contracts.CarService;
 
-public class CarServiceImpl {
+public class CarServiceImpl implements CarService {
 	
 	//data model
 		private List<Car> carList= new LinkedList<Car>();

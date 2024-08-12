@@ -1,6 +1,7 @@
 <?page title="Auto Generated index.zul"?>
 <window title="Hello World!!" border="normal" width="200px">
-<a href="search.zul">search.zul</a>
+<a href="search.zul">search with MVC</a>
+<a href="searchMVVM.zul">search with MVVM</a>
 <label value="You are using: ${desktop.webApp.version}"/>
 
 </window>
